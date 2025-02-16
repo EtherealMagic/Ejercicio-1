@@ -1,20 +1,20 @@
 import sistema_banco as cu
 while True: 
         
-    entrada = (input("""
-----------------------INTERFAZ---------------------
-          escriba '1' para consultar usuarios
-        escriba '2' para realizar una transferencia
-               escriba '3' para salir
-entrada: """))
+    user_input = (input("""
+----------------------INTERFACE---------------------
+          Type '1' to search a user
+        Type '2' to make a transsaction
+               Type '3' to exit
+input: """))
     try:
-        opcion = int(entrada)
-        if opcion == 1:
+        option = int(user_input)
+        if option == 1:
             cu.consulta()
-        elif opcion == 2:
+        elif option == 2:
             cu.transaccion()
-        elif opcion == 3:
+        elif option == 3:
             break
 
     except Exception as e:
-        print(f"error inesperado: {e}")
+        print(f"unespected error: {e}")
